@@ -5,8 +5,20 @@
   "main": "src/jquery.cslider.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/delegator/jquery.cslider"
+    "url": "https://github.com/delegator/jquery.cslider.git"
   },
+  "bugs": "https://github.com/delegator/jquery.cslider/issues",
+  "homepage": "https://github.com/delegator/jquery.cslider",
+  "author": "Manoela Ilic <crnacura@gmail.com> (http://tympanus.net/)",
+  "contributors": [
+    "Tom Richards <tom.r@delegator.com> (https://www.delegator.com/)"
+  ],
+  "keywords": [
+    "jquery-plugin",
+    "jquery",
+    "parallax",
+    "slider"
+  ],
   "license": "custom",
   "dependencies": {
     "jquery": "^2.1.3"
