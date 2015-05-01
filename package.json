@@ -8,6 +8,7 @@
   "license": "custom",
   "homepage": "https://github.com/delegator/jquery.cslider",
   "main": "src/jquery.cslider.js",
+  "repository": "delegator/jquery.cslider",
 
   "contributors": [
     "Tom Richards <tom.r@delegator.com> (https://www.delegator.com/)"
@@ -18,10 +19,6 @@
     "parallax",
     "slider"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/delegator/jquery.cslider.git"
-  },
   "dependencies": {
     "jquery": "^2.1.3"
   }
