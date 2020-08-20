@@ -26,7 +26,7 @@
     $.Slider.prototype = {
         _init: function (options) {
             this.options = $.extend(true, {}, $.Slider.defaults, options);
-            this.$slides = this.$el.children('div.da-slide');
+            this.$slides = this.$el.find('div.da-slide');
             this.slidesCount = this.$slides.length;
             this.current = this.options.current;
             if (this.current < 0 || this.current >= this.slidesCount) {
