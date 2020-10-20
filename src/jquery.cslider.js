@@ -26,7 +26,7 @@
     $.Slider.prototype = {
         _init: function (options) {
             this.options = $.extend(true, {}, $.Slider.defaults, options);
-            this.$slides = this.$el.children('div.da-slide');
+            this.$slides = this.$el.find('div.da-slide');
             this.slidesCount = this.$slides.length;
             this.current = this.options.current;
             if (this.current < 0 || this.current >= this.slidesCount) {
@@ -53,7 +53,7 @@
             }
         },
         _navigate: function (page, dir) {
-            var $current = this.$slides.eq(this.current), $next, _self = this;
+            var $current = this.$slides.eq(this.current), $next;
             if (this.current === page || this.isAnimating) return false;
             this.isAnimating = true;
             // check dir
@@ -112,11 +112,11 @@
         },
         _loadEvents: function () {
             var _self = this;
-            this.$pages.on('click.cslider', function (event) {
+            this.$pages.on('click.cslider', function () {
                 _self.page($(this).index());
                 return false;
             });
-            this.$navNext.on('click.cslider', function (event) {
+            this.$navNext.on('click.cslider', function () {
                 if (_self.options.autoplay) {
                     clearTimeout(_self.slideshow);
                     _self.options.autoplay = false;
@@ -125,7 +125,7 @@
                 _self._navigate(page, 'next');
                 return false;
             });
-            this.$navPrev.on('click.cslider', function (event) {
+            this.$navPrev.on('click.cslider', function () {
                 if (_self.options.autoplay) {
                     clearTimeout(_self.slideshow);
                     _self.options.autoplay = false;
